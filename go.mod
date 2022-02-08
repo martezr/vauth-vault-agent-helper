@@ -1,4 +1,4 @@
-module github.com/martezr/vauth/vault-agent-vsphere-helper
+module github.com/martezr/vauth-vault-agent-helper
 
 go 1.16
 

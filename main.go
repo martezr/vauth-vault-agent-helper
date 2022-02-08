@@ -33,6 +33,8 @@ func writeVaultFile(path string, data string) {
 }
 
 func main() {
+	log.Println("Starting the vAuth vault agent helper")
+
 	// Evaluate whether the workload is running on vSphere
 	isVM, err := vmcheck.IsVirtualWorld()
 	if err != nil {
@@ -48,7 +50,6 @@ func main() {
 	if hclErr != nil {
 		log.Fatalf("Failed to load configuration: %s", hclErr)
 	}
-	log.Printf("Configuration is %#v", config)
 
 	vsphereConfig := rpcvmx.NewConfig()
 
